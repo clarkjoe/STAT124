@@ -1,6 +1,6 @@
 /* IOUT data */
 data iout;
-   infile "/folders/myfolders/3HW/iout.csv" dlm=",";
+   infile "/folders/myshortcuts/STAT124/SASUniversityEdition/myfolders/3HW/iout.csv" dlm=",";
    input Student Q Score;
 run;
  

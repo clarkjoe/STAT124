@@ -29,16 +29,9 @@ data one;
 		p=upcase(compress(n||o));
 		q=tranwrd(p, 'NO', 'ON');
 		r=substrn(q,1,2);
-		x{1} = ((1)/k);
-		x{2} = ((2)/k);
-		x{3} = ((3)/k);
-		x{4} = ((4)/k);
-		x{5} = ((5)/k);
-		x{6} = ((6)/k);
-		x{7} = ((7)/k);
-		x{8} = ((8)/k);
-		x{9} = ((9)/k);
-		x{10} = ((10)/k);
+		do f=1 to 10;
+			x{f} = ((f)/k);
+		end;
 		output;
 		end;
 	end;
@@ -46,6 +39,7 @@ run;
 
 /* rearrange order of columns */
 data onePretty;
+	drop f;
 	retain i j k x1-x10 m n o p q r;
 	set one;
 run;
